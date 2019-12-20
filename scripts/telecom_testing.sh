@@ -96,8 +96,8 @@ _lite_test_general() {
       return
     fi
 
-    # Strip off any possible aosp_ prefix from the target product
-    local canonical_product=$(sed 's/^aosp_//' <<< "$TARGET_PRODUCT")
+    # Strip off any possible doraemon_ prefix from the target product
+    local canonical_product=$(sed 's/^doraemon_//' <<< "$TARGET_PRODUCT")
 
     adb install -r -t "out/target/product/$canonical_product/$apk_loc"
     if [ $? -ne 0 ] ; then
